@@ -53,7 +53,7 @@ public class Example1 {
 
 	private static void printIt3(ParseResult<Character, List<Character>> r) {
 		if(!r.isSuccess()) {
-			print("we're toast, in that we weren't able to parse the *LINE* you gave us: " + r.getErrorMessage());
+			print("couldn't parse *LINE*: " + r.getErrorMessage());
 			return;
 		}
 		print("rest: " + r.getRestTokens().size() + " " + r.getRestTokens().getHead().get());
@@ -63,7 +63,7 @@ public class Example1 {
 
 	private static void printIt(ParseResult<Character, List<Token>> r) {
 		if(!r.isSuccess()) {
-			print("we're toast, in that we weren't able to parse the file you gave us");
+			print("couldn't parse file");
 			return;
 		}
 		print("rest: " + r.getRestTokens().size());
